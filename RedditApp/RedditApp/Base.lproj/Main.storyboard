@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RedditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yP7-IV-i0w">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yP7-IV-i0w" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="RNI-M9-Jp2"/>
+                            <constraint firstItem="yP7-IV-i0w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e8R-nE-2Xp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yP7-IV-i0w" secondAttribute="trailing" id="kN9-UN-GZh"/>
+                            <constraint firstItem="yP7-IV-i0w" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wH3-Z1-1lu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="yP7-IV-i0w" id="ohs-jt-7v5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580.91603053435108" y="-25.35211267605634"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="jgt-c7-oPy">
+            <objects>
+                <viewController storyboardIdentifier="Detail" id="Fh8-13-QG8" customClass="DetailViewController" customModule="RedditApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yaj-Hc-BaE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jGc-bk-9Ds">
+                                <rect key="frame" x="0.0" y="134" width="393" height="610"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLO-7p-bFt" userLabel="saveButton">
+                                <rect key="frame" x="347.33333333333331" y="78" width="29.666666666666686" height="32"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="square.and.arrow.down.on.square.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="Fh8-13-QG8" eventType="touchUpInside" id="KPC-wh-qTe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bx-GX-IE4">
+                                <rect key="frame" x="16" y="75" width="51" height="35"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="arrowshape.turn.up.backward.fill" catalog="system" symbolScale="large"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="backButtonTapped:" destination="Fh8-13-QG8" eventType="touchUpInside" id="OkQ-SM-FnS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9wr-qK-dHx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LLO-7p-bFt" firstAttribute="trailing" secondItem="yaj-Hc-BaE" secondAttribute="trailingMargin" id="9Pi-vq-Phu"/>
+                            <constraint firstItem="jGc-bk-9Ds" firstAttribute="centerX" secondItem="yaj-Hc-BaE" secondAttribute="centerX" id="F81-zg-aY3"/>
+                            <constraint firstItem="jGc-bk-9Ds" firstAttribute="leading" secondItem="9wr-qK-dHx" secondAttribute="leading" id="GP4-5Y-Ved"/>
+                            <constraint firstItem="LLO-7p-bFt" firstAttribute="top" secondItem="9wr-qK-dHx" secondAttribute="top" constant="19" id="MGQ-k4-VfO"/>
+                            <constraint firstItem="0Bx-GX-IE4" firstAttribute="leading" secondItem="yaj-Hc-BaE" secondAttribute="leadingMargin" id="PPr-YR-1U5"/>
+                            <constraint firstItem="jGc-bk-9Ds" firstAttribute="top" secondItem="9wr-qK-dHx" secondAttribute="top" constant="75" id="Tz9-7v-UE1"/>
+                            <constraint firstItem="LLO-7p-bFt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9wr-qK-dHx" secondAttribute="leading" symbolic="YES" id="cVz-RI-wQw"/>
+                            <constraint firstItem="9wr-qK-dHx" firstAttribute="bottom" secondItem="jGc-bk-9Ds" secondAttribute="bottom" constant="25" id="ntV-9L-sya"/>
+                            <constraint firstItem="0Bx-GX-IE4" firstAttribute="bottom" secondItem="LLO-7p-bFt" secondAttribute="bottom" id="ouw-Hc-SQE"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="0Bx-GX-IE4" id="Xys-vD-0wJ"/>
+                        <outlet property="detailImageView" destination="jGc-bk-9Ds" id="d5p-85-Lxd"/>
+                        <outlet property="saveButton" destination="LLO-7p-bFt" id="gU6-jH-JpQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ib5-l9-txO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310.6870229007634" y="-25.35211267605634"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="square.and.arrow.down.on.square.fill" catalog="system" width="122" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
